@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.cupp.msu.countapp.databinding.ActivityMainBinding
+import com.google.firebase.perf.metrics.Counter
 
 
 class MainActivity : AppCompatActivity() {
 
 
-    private lateinit var count: Counter
     private lateinit var binding: ActivityMainBinding
 
     //Model
@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
+
         class Counter {
             private var count: Int = 0
             fun addCount() {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 return count
             }
         }
+        var count = Counter()
 
         count = Counter()
         display = binding.tv1
