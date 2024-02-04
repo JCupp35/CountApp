@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.cupp.msu.countapp.databinding.ActivityMainBinding
-import com.google.firebase.perf.metrics.Counter
+
 
 
 class MainActivity : AppCompatActivity() {
-
 
     private lateinit var binding: ActivityMainBinding
 
@@ -33,9 +32,8 @@ class MainActivity : AppCompatActivity() {
                 return count
             }
         }
-        var count = Counter()
 
-        count = Counter()
+        var count: Counter = Counter()
         display = binding.tv1
 
         btn = binding.btn1
