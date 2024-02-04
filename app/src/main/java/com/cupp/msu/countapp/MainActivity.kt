@@ -10,6 +10,7 @@ import com.cupp.msu.countapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+   // private lateinit var count: Counter
     private lateinit var binding: ActivityMainBinding
 
     //Model
